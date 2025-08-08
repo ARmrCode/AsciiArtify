@@ -15,9 +15,7 @@ Launching a cluster with the Docker driver
 <pre><code>minikube start --driver=docker</code></pre>
 
 Checking nodes
-<pre><code>```
-kubectl get nodes
-```</code></pre>
+<pre><code>kubectl get nodes</code></pre>
 
 Creating a namespace
 <pre><code>kubectl create namespace demo</code></pre>
@@ -31,6 +29,4 @@ kubectl get svc -n demo
 </code></pre>
 
 Open the service in a browser (via NodePort)
-<pre><code>```
-minikube service -n demo nginx-example  
-```</code></pre>
+<pre><code>minikube service -n demo nginx-example</code></pre>
