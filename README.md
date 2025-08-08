@@ -3,4 +3,4 @@ These instructions will help you launch a Kubernetes cluster locally and deploy 
 Below is a demonstration of how to control each instrument.
 
 Minikube 
-![Minikube demo](./demos/minikube.svg)
+<img src="minikube.svg" width="100%" />
