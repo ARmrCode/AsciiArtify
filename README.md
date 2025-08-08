@@ -9,14 +9,10 @@ Below is a demonstration of how to control each instrument.
 </p>
 
 Installing minikube via Homebrew
-<pre><code>
-brew install minikube
-</code></pre>
+<pre><code>brew install minikube</code></pre>
 
 Launching a cluster with the Docker driver
-<pre><code>```
-minikube start --driver=docker
-```</code></pre>
+<pre><code>minikube start --driver=docker</code></pre>
 
 Checking nodes
 <pre><code>```
