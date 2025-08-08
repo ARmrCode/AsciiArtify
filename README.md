@@ -20,20 +20,15 @@ kubectl get nodes
 ```</code></pre>
 
 Creating a namespace
-<pre><code>```
-kubectl create namespace demo
-```</code></pre>
+<pre><code>kubectl create namespace demo</code></pre>
 
 Deploy Hello World (nginx)
-<pre><code>```
-kubectl apply -n demo -f https://raw.githubusercontent.com/kubernetes/website/main/content/en/examples/application/nginx-app.yaml
-```</code></pre>
+<pre><code>kubectl apply -n demo -f https://raw.githubusercontent.com/kubernetes/website/main/content/en/examples/application/nginx-app.yaml</code></pre>
 
 Verification
-<pre><code>```
-kubectl get pods -n demo
+<pre><code>kubectl get pods -n demo
 kubectl get svc -n demo
-```</code></pre>
+</code></pre>
 
 Open the service in a browser (via NodePort)
 <pre><code>```
