@@ -8,7 +8,7 @@ Below is a demonstration of how to control each instrument.
 <h2 align="center" style="font-size:28px;">☸️ Minikube Demo</h2>
 
 <p align="center">
-  <img src="minikube.svg" width="600px" />
+  <img src="minikube.svg" width="700px" />
 </p>
 
 Installing minikube via Homebrew
@@ -38,5 +38,5 @@ Open the service in a browser (via NodePort)
 <h2 align="center" style="font-size:28px;">☸️ Kind Demo</h2>
 
 <p align="center">
-  <img src="kind.svg" width="600px" />
+  <img src="kind.svg" width="700px" />
 </p>
