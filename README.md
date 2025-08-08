@@ -8,27 +8,27 @@ Below is a demonstration of how to control each instrument.
   <img src="minikube.svg" width="800px" />
 </p>
 
-# Installing minikube via Homebrew
+<pre><code>```
 <pre><code>```
 brew install minikube
 ```</code></pre>
 
-# Launching a cluster with the Docker driver
+**Launching a cluster with the Docker driver**
 <pre><code>```
 minikube start --driver=docker
 ```</code></pre>
 
-# Checking nodes
+**Checking nodes**
 <pre><code>```
 kubectl get nodes
 ```</code></pre>
 
-# Creating a namespace
+**Creating a namespace**
 <pre><code>```
 kubectl create namespace demo
 ```</code></pre>
 
-# Deploy Hello World (nginx)
+**Deploy Hello World (nginx)**
 <pre><code>```
 kubectl apply -n demo -f https://raw.githubusercontent.com/kubernetes/website/main/content/en/examples/application/nginx-app.yaml
 ```</code></pre>
