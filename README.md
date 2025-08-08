@@ -33,3 +33,10 @@ kubectl get svc -n demo
 
 Open the service in a browser (via NodePort)
 <pre><code>minikube service -n demo nginx-example</code></pre>
+
+
+<h2 align="center" style="font-size:28px;">☸️ Kind Demo</h2>
+
+<p align="center">
+  <img src="kind.svg" width="800px" />
+</p>
