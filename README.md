@@ -7,3 +7,27 @@ Below is a demonstration of how to control each instrument.
 <p align="center">
   <img src="minikube.svg" width="800px" />
 </p>
+
+<pre><code>```
+# Встановлення minikube через Homebrew
+brew install minikube
+
+# Запуск кластеру з драйвером Docker
+minikube start --driver=docker
+
+# Перевірка вузлів
+kubectl get nodes
+
+# Створення namespace
+kubectl create namespace demo
+
+# Деплой Hello World (nginx)
+kubectl apply -n demo -f https://raw.githubusercontent.com/kubernetes/website/main/content/en/examples/application/nginx-app.yaml
+
+# Перевірка
+kubectl get pods -n demo
+kubectl get svc -n demo
+
+# Відкрити сервіс у браузері (через NodePort)
+minikube service -n demo nginx-example  
+```</code></pre>
