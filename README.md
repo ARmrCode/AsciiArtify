@@ -32,7 +32,7 @@ kubectl get svc -n demo
 </code></pre>
 
 Open the service in a browser (via NodePort)
-<pre><code>minikube service -n demo nginx-example</code></pre>
+<pre><code>minikube service my-nginx-svg -n demo</code></pre>
 
 
 <h2 align="center" style="font-size:28px;">☸️ Kind Demo</h2>
@@ -40,3 +40,28 @@ Open the service in a browser (via NodePort)
 <p align="center">
   <img src="kind.svg" width="700px" />
 </p>
+
+Installation (Linux/macOS)
+<pre><code>curl -Lo ./kind https://kind.sigs.k8s.io/dl/latest/kind-linux-amd64
+chmod +x ./kind
+sudo mv ./kind /usr/local/bin/kind</code></pre>
+
+Creating a cluster
+<pre><code>kind create cluster --name asciiartify-poc</code></pre>
+
+Context is already automatically activated
+<pre><code>kubectl cluster-info --context kind-asciiartify-poc</code></pre>
+
+Creating a namespace
+<pre><code>kubectl create namespace demo</code></pre>
+
+Deploy Hello World (nginx)
+<pre><code>kubectl apply -n demo -f https://raw.githubusercontent.com/kubernetes/website/main/content/en/examples/application/nginx-app.yaml</code></pre>
+
+Verification
+<pre><code>kubectl get pods -n demo
+kubectl get svc -n demo
+</code></pre>
+
+Open the service in a browser (via NodePort)
+<pre><code>kubectl port-forward -n demo service/my-nginx-svg 8080:80</code></pre>
