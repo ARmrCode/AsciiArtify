@@ -100,7 +100,7 @@ GitHub було обрано як основну систему контролю
 
 ---
 
-_Pov: Klimenchenko Vladyslav_
+_Author: Klimenchenko Vladyslav_
 
 _As of: 2025-08-08_
 
