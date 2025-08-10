@@ -1,4 +1,8 @@
+<h2 align="center" style="font-size:28px;">☸️ Minikube Demo</h2>
 
+<p align="center">
+  <img src="minikube.svg" width="700px" />
+</p>
 
 
 # Proof of Concept: Deploying ArgoCD on Kubernetes (k3d)
