@@ -1,7 +1,7 @@
 <h1 align="center">ArgoCD Deployment</h1>
 
 <p align="center">
-  <img src="minikube.svg" width="700px" />
+  <img src="argocdPOC.md" width="700px" />
 </p>
 
 
