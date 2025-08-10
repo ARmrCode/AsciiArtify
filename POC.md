@@ -1,4 +1,4 @@
-<h2 align="center" style="font-size: 50px;">ArgoCD deployment</h2>
+<h1 align="center">ArgoCD Deployment</h1>
 
 <p align="center">
   <img src="minikube.svg" width="700px" />
