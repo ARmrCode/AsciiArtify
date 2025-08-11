@@ -3,8 +3,10 @@
 
 ## Demo Video
 
-[![Watch Video](https://link-to-preview-image.png)](https://drive.google.com/uc?export=download&id=1LEGiraHnAIm1CKphwYSF_OZowD7Wgooo)
-
+<video width="640" height="360" controls>
+  <source src="https://drive.google.com/uc?export=download&id=1LEGiraHnAIm1CKphwYSF_OZowD7Wgooo" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
 ---
 
 ## MVP description
