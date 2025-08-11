@@ -7,61 +7,61 @@
 
 ---
 
-## Опис MVP
+## MVP description
 
-MVP (Minimum Viable Product) — це мінімальний продукт з основними функціями, необхідними для того, щоб перевірити продукт на фокус-групі користувачів.  
-На цьому етапі розробники додають додаткові функції, фіксять баги та вдосконалюють продукт на основі отриманого від користувачів фідбеку.
+MVP (Minimum Viable Product) is a minimal product with the basic features necessary to test the product on a focus group of users.  
+At this stage, developers add additional features, fix bugs, and improve the product based on user feedback.
 
-З боку DevOps для цього потрібно створити додаток у ArgoCD, який буде відслідковувати Git-репозиторій продукту  
+On the DevOps side, this requires creating an application in ArgoCD that will track the product's Git repository  
 [https://github.com/ARmrCode/AsciiArtify](https://github.com/ARmrCode/AsciiArtify)  
-та налаштувати автоматичну синхронізацію.
+and setting up automatic synchronization.
 
-Після успішного налаштування ArgoCD можна запустити повний цикл, щоб продемонструвати, як ArgoCD автоматично відслідковує та синхронізує зміни з Git-репозиторію та розгортає їх на Kubernetes-кластері.
+Once ArgoCD is successfully configured, you can run a full cycle to demonstrate how ArgoCD automatically tracks and synchronizes changes from the Git repository and deploys them to the Kubernetes cluster.
 
 ---
 
-## Виконані кроки
+## Steps taken
 
 ```bash
-# Проксі доступ до ArgoCD
+# Proxy access to ArgoCD
 kubectl port-forward svc/argocd-server -n argocd 8080:443
 
-# Отримання паролю адміністратора
+# Get the admin password
 kubectl -n argocd get secret argocd-initial-admin-secret -o jsonpath="{.data.password}" | base64 -d; echo
 
-# Проксі доступ до сервісу demo/ambassador
+# Proxy access to the demo/ambassador service
 kubectl port-forward -n demo svc/ambassador 8088:80
 
-# Перевірка сервісів у namespace demo
+# Checking services in the demo namespace
 kubectl get svc -n demo
 
-# Проксі доступ повторно
+# Proxy access again
 kubectl port-forward -n demo svc/ambassador 8088:80
 
-# Тестовий запит до сервісу
+# Test request to the service
 curl localhost:8088
 
-# Завантаження тестового зображення Google
-wget -O /tmp/g.png "https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png"
+# Downloading a test image from Google
+wget -O /tmp/g.png “https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png”
 
-# Відкриття зображення
+# Opening the image
 open /tmp/g.png 
 
-# Відправка зображення у сервіс
-curl -F 'image=@/tmp/g.png' localhost:8088/img/
+# Sending the image to the service
+curl -F ‘image=@/tmp/g.png’ localhost:8088/img/
 
-# Завантаження зображення повторно
-wget -O /tmp/g.png "https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png"
+# Download the image again
+wget -O /tmp/g.png “https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png”
 
-# Відкриття зображення повторно
+# Reopening the image
 open /tmp/g.png 
 
-# Повторна відправка зображення у сервіс
-curl -F 'image=@/tmp/g.png' localhost:8088/img/
+# Resending the image to the service
+curl -F ‘image=@/tmp/g.png’ localhost:8088/img/
 ```
 
 ---
 
-## Результат
-Налаштований додаток в ArgoCD автоматично синхронізує стан Kubernetes-кластера з Git-репозиторієм,  
-а сервіс обробляє завантажені зображення, як показано у демо-відео.
+## Result
+The configured application in ArgoCD automatically synchronizes the state of the Kubernetes cluster with the Git repository,  
+and the service processes the uploaded images, as shown in the demo video.
