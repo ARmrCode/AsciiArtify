@@ -3,7 +3,11 @@
 
 ## Demo Video
 
-<video src="../demo.mp4" controls autoplay loop muted width="800"></video>
+<video width="600" controls>
+  <source src="demo.mp4" type="demo/mp4">
+  Ваш браузер не поддерживает видео тег.
+</video>
+
 
 ---
 
