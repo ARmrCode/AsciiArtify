@@ -3,7 +3,8 @@
 
 ## Demo Video
 
-![ArgoCD MVP Demo](doc/ArgoCD_MVP_test.gif)
+![ArgoCD MVP Demo](https://github.com/USERNAME/REPO/raw/main/doc/ArgoCD_MVP_test.gif)
+
 
 ## MVP description
 
