@@ -3,11 +3,7 @@
 
 ## Demo Video
 
-<video width="600" controls>
-  <source src="ArgoCD_MVP_test.mp4" type="ArgoCD_MVP_test.mp4/mp4">
-  Ваш браузер не поддерживает видео тег.
-</video>
-
+[![Watch Video](https://link-to-preview-image.png)](https://drive.google.com/uc?export=download&id=1LEGiraHnAIm1CKphwYSF_OZowD7Wgooo)
 
 ---
 
