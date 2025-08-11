@@ -4,7 +4,7 @@
 ## Demo Video
 
 <video width="600" controls>
-  <source src="demo.mp4" type="demo/mp4">
+  <source src="ArgoCD_MVP_test.mp4" type="ArgoCD_MVP_test.mp4/mp4">
   Ваш браузер не поддерживает видео тег.
 </video>
 
