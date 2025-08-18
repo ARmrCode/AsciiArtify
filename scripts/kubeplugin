@@ -1,0 +1,27 @@
+#!/bin/bash
+
+NAMESPACE=$1
+POD_NAME=$2
+
+if [ -z "$NAMESPACE" ]; then
+  echo "Usage: $0 <namespace> [pod_name]"
+  exit 1
+fi
+
+if [ -z "$POD_NAME" ]; then
+  # Get all pods in namespace
+  kubectl top pods -n "$NAMESPACE" | tail -n +2 | while read line; do
+    NAME=$(echo $line | awk '{print $1}')
+    CPU=$(echo $line | awk '{print $2}')
+    MEMORY=$(echo $line | awk '{print $3}')
+    echo "Resource: pods, Namespace: $NAMESPACE, Name: $NAME, CPU: $CPU, Memory: $MEMORY"
+  done
+else
+  # Get specific pod
+  kubectl top pod "$POD_NAME" -n "$NAMESPACE" | tail -n +2 | while read line; do
+    NAME=$(echo $line | awk '{print $1}')
+    CPU=$(echo $line | awk '{print $2}')
+    MEMORY=$(echo $line | awk '{print $3}')
+    echo "Resource: pods, Namespace: $NAMESPACE, Name: $NAME, CPU: $CPU, Memory: $MEMORY"
+  done
+fi
